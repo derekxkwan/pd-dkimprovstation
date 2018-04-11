@@ -1,4 +1,4 @@
-#N canvas 898 272 1541 819 12;
+#N canvas 367 466 1541 819 12;
 #X obj 103 35 dkezadc~ 1;
 #X obj 510 35 dkezdistortM~;
 #X obj 346 27 dkezvuM~;
@@ -18,7 +18,7 @@
 #X obj 721 335 dkezdelaylopM~ 5000;
 #X obj 485 680 dkezpanM~;
 #X obj 715 681 dkezpanM~;
-#N canvas 612 195 1152 847 \$0-improv_loopstation 0;
+#N canvas 813 284 1152 847 \$0-improv_loopstation 0;
 #X obj 99 76 dkloopplay~ \$0-loop0;
 #X obj 203 42 r dkimprovstation_1b;
 #X obj 97 166 dkezdistortM~;
@@ -57,6 +57,10 @@
 #X obj 362 79 dkloopplay~ \$0-loop1;
 #X obj 639 82 dkloopplay~ \$0-loop2;
 #X obj 899 84 dkloopplay~ \$0-loop3;
+#X obj 266 398 loadbang;
+#X msg 266 422 1;
+#X obj 821 409 loadbang;
+#X msg 821 433 1;
 #X connect 0 0 2 0;
 #X connect 1 0 0 3;
 #X connect 2 0 3 0;
@@ -97,6 +101,12 @@
 #X connect 35 0 11 0;
 #X connect 36 0 18 0;
 #X connect 37 0 25 0;
+#X connect 38 0 39 0;
+#X connect 39 0 5 2;
+#X connect 39 0 14 2;
+#X connect 40 0 41 0;
+#X connect 41 0 21 2;
+#X connect 41 0 28 2;
 #X restore 117 658 pd \$0-improv_loopstation;
 #N canvas 232 391 317 197 \$0-improv_loop_arrays 0;
 #X obj 38 29 array define \$0-loop0 88200;
@@ -121,6 +131,8 @@
 #X obj 724 483 dkezstutterM~ 5000;
 #X obj 500 541 dkezstutterM~ 5000;
 #X obj 1047 624 dkezvuS~;
+#X obj 872 360 loadbang;
+#X msg 872 384 1;
 #X connect 0 0 2 0;
 #X connect 0 0 6 0;
 #X connect 1 0 4 0;
@@ -161,3 +173,7 @@
 #X connect 31 0 30 0;
 #X connect 35 0 10 0;
 #X connect 36 0 9 0;
+#X connect 38 0 39 0;
+#X connect 39 0 16 2;
+#X connect 39 0 15 2;
+#X connect 39 0 14 3;
