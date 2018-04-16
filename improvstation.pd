@@ -50,6 +50,8 @@
 #X msg 983 44 120;
 #X obj 871 270 t f f f f f f f f f, f 64;
 #X obj 1314 312 v dkimprov_dur;
+#X obj 15 20 dklogidy;
+#X obj 12 156 s dkimprov_logidy;
 #X connect 0 0 2 0;
 #X connect 0 0 12 0;
 #X connect 1 0 3 0;
@@ -87,3 +89,4 @@
 #X connect 37 6 31 0;
 #X connect 37 7 33 0;
 #X connect 37 8 38 0;
+#X connect 39 0 40 0;
