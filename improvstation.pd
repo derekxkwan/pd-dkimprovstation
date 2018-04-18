@@ -1,4 +1,4 @@
-#N canvas 379 139 1594 853 12;
+#N canvas 119 227 1939 905 12;
 #X obj 164 485 catch~ dkimprovstation_voiceL;
 #X obj 396 478 catch~ dkimprovstation_voiceR;
 #X obj 180 674 dkvancomp~ 512;
@@ -8,13 +8,13 @@
 #X obj 182 747 dkezdac~ 1 2;
 #X obj 861 196 dkvmetrox dkimprovstation 500;
 #X floatatom 962 79 5 0 1e+20 0 bpm - -, f 5;
-#X obj 870 30 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 415 18 tgl 15 0 empty empty transport 17 7 0 15 -262144 -1 -1
+0 1;
 #X msg 954 155 tempo \$1 permin;
 #N canvas 978 534 450 300 \$0-improvstation_arrays 0;
 #X obj 15 22 array define dkimprovstation_rec0 882000;
 #X obj 12 50 array define dkimprovstation_rec1 882000;
-#X restore 581 100 pd \$0-improvstation_arrays;
+#X restore 176 33 pd \$0-improvstation_arrays;
 #X obj 233 554 *~ 0.5;
 #X obj 319 556 *~ 0.5;
 #X obj 233 578 +~;
@@ -26,7 +26,7 @@
 #X obj 290 68 dkezsndrecM~ dkimprovstation_rec1;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
-#X restore 581 128 pd \$0-improvstation_recwindow;
+#X restore 176 61 pd \$0-improvstation_recwindow;
 #X obj 867 238 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 962 102 t f f;
@@ -52,6 +52,25 @@
 #X obj 1314 312 v dkimprov_dur;
 #X obj 15 20 dklogidy;
 #X obj 12 156 s dkimprov_logidy;
+#X obj 1161 234 netsend -u;
+#X obj 1209 52 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 1209 72 sel 1 0;
+#X msg 1227 193 disconnect;
+#X symbolatom 1278 40 15 0 0 0 ip - -, f 15;
+#X obj 1287 105 pack s f;
+#X obj 1198 121 list;
+#X msg 1179 153 connect \$1 \$2;
+#X floatatom 1441 41 5 0 1e+20 0 port - -, f 5;
+#X obj 1426 179 dkvanctr 16;
+#X obj 1534 103 bng 15 250 50 0 empty empty reset 17 7 0 12 -262144
+-1 -1;
+#X obj 550 85 s dkimprov_reset;
+#X obj 394 82 s dkimprov_transport;
+#X obj 551 34 sel 1;
+#X obj 415 38 t f f;
+#X obj 769 112 r dkimprov_transport;
+#X obj 1419 113 r dkimprovstation_4b;
 #X connect 0 0 2 0;
 #X connect 0 0 12 0;
 #X connect 1 0 3 0;
@@ -63,7 +82,7 @@
 #X connect 5 0 4 0;
 #X connect 7 0 17 0;
 #X connect 8 0 18 0;
-#X connect 9 0 7 0;
+#X connect 9 0 55 0;
 #X connect 10 0 7 1;
 #X connect 12 0 14 0;
 #X connect 13 0 14 1;
@@ -90,3 +109,19 @@
 #X connect 37 7 33 0;
 #X connect 37 8 38 0;
 #X connect 39 0 40 0;
+#X connect 42 0 43 0;
+#X connect 43 0 47 0;
+#X connect 43 1 44 0;
+#X connect 44 0 41 0;
+#X connect 45 0 46 0;
+#X connect 46 0 47 1;
+#X connect 47 0 48 0;
+#X connect 48 0 41 0;
+#X connect 49 0 46 1;
+#X connect 50 0 41 0;
+#X connect 51 0 50 3;
+#X connect 54 0 52 0;
+#X connect 55 0 53 0;
+#X connect 55 1 54 0;
+#X connect 56 0 7 0;
+#X connect 57 0 50 0;
