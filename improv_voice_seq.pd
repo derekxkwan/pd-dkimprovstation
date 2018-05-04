@@ -1,0 +1,21 @@
+#N canvas 867 400 1123 1034 12;
+#X obj 231 774 throw~ dkimprovstation_voiceL;
+#X obj 463 769 throw~ dkimprovstation_voiceR;
+#X obj 283 682 dkezvolS~;
+#X obj 205 71 dkvmetrox_rcv dkimprovstation;
+#X obj 228 40 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 4;
+#X obj 162 210 dkezseq;
+#X obj 79 412 dkezvuM~;
+#X obj 320 498 dkezdelaylopM~ 5000;
+#X obj 195 113 dkezctr 32;
+#X obj 572 377 loadbang;
+#X msg 572 401 1;
+#X connect 2 0 0 0;
+#X connect 2 1 1 0;
+#X connect 3 0 8 0;
+#X connect 4 0 3 0;
+#X connect 7 0 2 0;
+#X connect 8 0 5 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 2;
