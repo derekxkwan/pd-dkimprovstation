@@ -32,8 +32,8 @@
 #X msg 72 45 4;
 #X obj 42 128 dkezctr 32;
 #X obj 498 572 dkezpshiftM~;
-#X obj 289 107 r dkimprovstation_1b;
-#X obj 289 142 bng 45 250 50 0 empty empty sync 0 -7 0 15 -262144 -1
+#X obj 392 10 r dkimprovstation_1b;
+#X obj 385 54 bng 45 250 50 0 empty empty sync 0 -7 0 15 -262144 -1
 -1;
 #N canvas 891 505 1663 841 \$0-improv_loopstation 1;
 #X obj 86 228 dkezdistortM~;
@@ -180,6 +180,14 @@
 #X obj 804 275 catch~ \$0-improv_loopL;
 #X obj 996 275 catch~ \$0-improv_loopR;
 #X obj 43 203 dkeznobuM~ \$0-snd 125 1;
+#X obj 322 140 dkfloatsync;
+#X obj 340 108 tgl 15 0 empty empty on 17 7 0 12 -262144 -1 -1 0 1
+;
+#X obj 533 73 tgl 30 0 empty empty sync? 0 -7 0 15 -262144 -1 -1 0
+1;
+#X obj 450 95 bng 15 250 50 0 empty empty reset 17 7 0 12 -262144 -1
+-1;
+#X obj 439 140 dkbangsync;
 #X connect 1 0 9 0;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
@@ -214,7 +222,15 @@
 #X connect 31 0 10 0;
 #X connect 31 0 36 0;
 #X connect 32 0 33 0;
+#X connect 33 0 40 2;
+#X connect 33 0 44 2;
 #X connect 37 0 16 0;
 #X connect 38 0 17 0;
 #X connect 39 0 4 0;
 #X connect 39 0 2 0;
+#X connect 40 0 30 0;
+#X connect 41 0 40 0;
+#X connect 42 0 40 1;
+#X connect 42 0 44 1;
+#X connect 43 0 44 0;
+#X connect 44 0 30 3;
