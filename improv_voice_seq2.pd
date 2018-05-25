@@ -7,7 +7,7 @@
 -1 4;
 #X obj 162 210 dkezseq;
 #X obj 115 620 dkezvuM~;
-#X obj 320 498 dkezdelaylopM~ 5000;
+#X obj 322 527 dkezdelaylopM~ 5000;
 #X obj 195 113 dkezctr 32;
 #X obj 572 377 loadbang;
 #X msg 572 401 1;
@@ -17,7 +17,7 @@
 #X obj 482 147 dkfloatsync;
 #X obj 500 115 tgl 15 0 empty empty on 17 7 0 12 -262144 -1 -1 0 1
 ;
-#X obj 693 80 tgl 30 0 empty empty sync? 0 -7 0 15 -262144 -1 -1 1
+#X obj 693 80 tgl 30 0 empty empty sync? 0 -7 0 15 -262144 -1 -1 0
 1;
 #X obj 610 102 bng 15 250 50 0 empty empty reset 17 7 0 12 -262144
 -1 -1;
