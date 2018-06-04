@@ -1,7 +1,7 @@
 #N canvas 213 225 1123 1034 12;
-#X obj 231 774 throw~ dkimprovstation_voiceL;
-#X obj 463 769 throw~ dkimprovstation_voiceR;
-#X obj 283 682 dkezvolS~;
+#X obj 232 852 throw~ dkimprovstation_voiceL;
+#X obj 464 847 throw~ dkimprovstation_voiceR;
+#X obj 284 760 dkezvolS~;
 #X obj 205 71 dkvmetrox_rcv dkimprovstation;
 #X obj 228 40 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
 -1 4;
@@ -17,7 +17,7 @@
 #X obj 482 147 dkfloatsync;
 #X obj 500 115 tgl 15 0 empty empty on 17 7 0 12 -262144 -1 -1 0 1
 ;
-#X obj 693 80 tgl 30 0 empty empty sync? 0 -7 0 15 -262144 -1 -1 1
+#X obj 693 80 tgl 30 0 empty empty sync? 0 -7 0 15 -262144 -1 -1 0
 1;
 #X obj 610 102 bng 15 250 50 0 empty empty reset 17 7 0 12 -262144
 -1 -1;
@@ -31,12 +31,13 @@
 #X obj 323 383 t f f;
 #X msg 401 406 tempo 150 permin;
 #X obj 162 350 t f f;
+#X obj 320 633 dkezvcfM~ 18000 5 5 1;
 #X connect 2 0 0 0;
 #X connect 2 1 1 0;
 #X connect 3 0 8 0;
 #X connect 4 0 3 0;
 #X connect 5 0 26 0;
-#X connect 7 0 2 0;
+#X connect 7 0 27 0;
 #X connect 8 0 5 0;
 #X connect 9 0 10 0;
 #X connect 10 0 7 2;
@@ -61,3 +62,4 @@
 #X connect 25 0 23 1;
 #X connect 26 0 19 0;
 #X connect 26 1 19 1;
+#X connect 27 0 2 0;
