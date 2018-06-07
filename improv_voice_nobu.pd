@@ -203,6 +203,7 @@
 #X obj 596 117 f;
 #X obj 596 141 / 4;
 #X msg 596 165 dur \$1;
+#X obj 231 63 t b f;
 #X connect 1 0 45 0;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
@@ -232,6 +233,7 @@
 #X connect 25 0 45 2;
 #X connect 26 0 46 0;
 #X connect 27 0 26 0;
+#X connect 27 0 53 0;
 #X connect 28 0 29 0;
 #X connect 29 0 27 0;
 #X connect 30 0 10 0;
@@ -258,3 +260,5 @@
 #X connect 50 0 51 0;
 #X connect 51 0 52 0;
 #X connect 52 0 44 0;
+#X connect 53 0 50 0;
+#X connect 53 1 51 1;
