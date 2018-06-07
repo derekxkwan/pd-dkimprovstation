@@ -24,6 +24,8 @@
 #X obj 296 790 dkezvcfM~ 18000 5 5 1;
 #X obj 162 210 dkezseq64;
 #X obj 195 113 dkezctr 64;
+#X msg 121 32 4;
+#X obj 98 7 loadbang;
 #X connect 2 0 0 0;
 #X connect 2 1 1 0;
 #X connect 3 0 19 0;
@@ -45,3 +47,5 @@
 #X connect 17 0 2 0;
 #X connect 18 0 16 0;
 #X connect 19 0 18 0;
+#X connect 20 0 4 0;
+#X connect 21 0 20 0;

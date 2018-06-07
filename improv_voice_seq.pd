@@ -32,9 +32,10 @@
 #X msg 400 572 tempo \$1 msec;
 #X obj 435 507 loadbang;
 #X obj 184 588 dkvanssimp~ 10;
-#X msg 146 25 4;
+#X msg 250 13 4;
 #X obj 162 210 dkezseq64;
 #X obj 195 113 dkezctr 64;
+#X obj 120 17 loadbang;
 #X connect 2 0 0 0;
 #X connect 2 1 1 0;
 #X connect 3 0 30 0;
@@ -69,3 +70,4 @@
 #X connect 28 0 4 0;
 #X connect 29 0 22 0;
 #X connect 30 0 29 0;
+#X connect 31 0 28 0;
