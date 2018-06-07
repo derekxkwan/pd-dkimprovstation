@@ -1,4 +1,4 @@
-#N canvas 279 683 1939 905 12;
+#N canvas 279 534 1939 905 12;
 #X obj 164 485 catch~ dkimprovstation_voiceL;
 #X obj 396 478 catch~ dkimprovstation_voiceR;
 #X obj 180 674 dkvancomp~ 512;
@@ -82,6 +82,10 @@
 #X obj 164 117 dkezopen ~/pdstuff/repos/pdkimprovstation/;
 #X obj 962 102 t f f f;
 #X obj 1056 125 s dkimprov_bpm;
+#X msg 235 283 105;
+#X obj 235 307 dkbpmtoms;
+#X floatatom 232 381 5 0 0 0 - - -, f 5;
+#X obj 235 331 * 0.75;
 #X connect 0 0 2 0;
 #X connect 0 0 12 0;
 #X connect 1 0 3 0;
@@ -144,3 +148,6 @@
 #X connect 66 0 10 0;
 #X connect 66 1 18 0;
 #X connect 66 2 67 0;
+#X connect 68 0 69 0;
+#X connect 69 0 71 0;
+#X connect 71 0 70 0;
