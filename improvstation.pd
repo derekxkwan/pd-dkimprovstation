@@ -1,4 +1,4 @@
-#N canvas 279 534 1939 905 12;
+#N canvas 262 447 1939 905 12;
 #X obj 164 485 catch~ dkimprovstation_voiceL;
 #X obj 396 478 catch~ dkimprovstation_voiceR;
 #X obj 180 674 dkvancomp~ 512;
